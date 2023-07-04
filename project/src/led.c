@@ -6,7 +6,6 @@ void led_init()
 {
   P1DIR |= LEDS;		// bits attached to leds are output
   switch_state_changed = 1;
-  led_update();
 }
 
 void led_update(){
@@ -20,5 +19,19 @@ void led_update(){
     P1OUT |= ledFlags;         // set bits for on leds
   }
   switch_state_changed = 0;
+}
+
+
+void turn_on_leds(){
+  for(int i = 0; i<1000; i++){
+    P1OUT = LED_RED;
+    __delay_cycles(10000);
+    P1OUT = LED_GREEN;
+    __delay_cycles(10000);
+    P1OUT = !LED_RED;
+    __delay_cycles(10000);
+    P1OUT = !LED_GREEN;
+    __delay_cycles(10000);
+  }
 }
 
