@@ -25,7 +25,18 @@ void buzzer_set_period(short cycles) /* buzzer clock = 2MHz.  (period of 1k resu
 }
 
 
-    
-    
+void sound() {
+  float notes[25] = {
+    1046.5, 1046.5, 1318.5, 1318.5, 1479.98, 1479.98, 1318.5, 
+    1174.66, 1174.66, 1046.5, 1046.5, 932.33, 932.33, 1046.5, 
+    1318.5, 1318.5, 1174.66, 1174.66, 1046.5,
+    1318.5, 1318.5, 1174.66, 1174.66, 1046.5, 
+    0 
+  };
   
-
+  for (int i = 0; i < 25; i++) {
+    buzzer_set_period(notes[i]);
+    __delay_cycles(2500000);
+  }
+  buzzer_set_period(0);
+}

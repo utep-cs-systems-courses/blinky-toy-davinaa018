@@ -2,7 +2,7 @@
 #include "stateMachines.h"
 #include "switches.h"
 #include "led.h"
-
+#include "buzzer.h"
 
 void state_advance(int state){
   switch(state){
@@ -17,6 +17,7 @@ void state_advance(int state){
     break;
   case 3:
     //Generate Sound
+    sound();
     state = 0;
     break;
   case 4:
