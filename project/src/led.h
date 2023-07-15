@@ -10,6 +10,7 @@
 void led_init();		/* initialize LEDs */
 void led_update();              /* update leds */
 void turn_on_leds();
+void led_pattern();
 
 // these are boolean flags
 extern unsigned char leds_changed, green_led_state, red_led_state;

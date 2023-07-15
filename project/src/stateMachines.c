@@ -13,6 +13,7 @@ void state_advance(int state){
     break;
   case 2:
     // Play w/ led
+    led_pattern();
     state = 0;
     break;
   case 3:

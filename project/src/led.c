@@ -35,3 +35,28 @@ void turn_on_leds(){
   }
 }
 
+void led_pattern(){
+  for (int i = 0; i < 10; i++) {
+    P1OUT = LED_RED;  // Turn on the red LED only
+    __delay_cycles(500000);
+    P1OUT = 0;  // Turn off both LEDs
+    __delay_cycles(500000);
+  }
+  for (int i = 0; i < 10; i++) {
+    P1OUT = LED_GREEN;  // Turn on the green LED only
+    __delay_cycles(500000);
+    P1OUT = 0;  // Turn off both LEDs
+    __delay_cycles(500000);
+  }
+  for(int i = 0; i<10; i++){ 
+    P1OUT = LED_GREEN;
+    __delay_cycles(500000);
+    P1OUT = !LED_RED;
+    __delay_cycles(2500000);
+    P1OUT = !LED_GREEN;
+    __delay_cycles(500000);
+    P1OUT = LED_RED;
+    __delay_cycles(2500000);
+  }
+}
+
