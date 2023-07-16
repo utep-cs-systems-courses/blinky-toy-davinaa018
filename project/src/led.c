@@ -58,5 +58,7 @@ void led_pattern(){
     P1OUT = LED_RED;
     __delay_cycles(2500000);
   }
+  P1OUT = !LED_GREEN;
+  P1OUT = !LED_RED;
 }
 

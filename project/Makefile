@@ -1,5 +1,4 @@
 all:
-	(cd timerLib && make install)
 	(cd src && make)
 
 clean:
