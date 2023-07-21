@@ -40,3 +40,15 @@ void sound() {
   }
   buzzer_set_period(0);
 }
+
+void song(){
+  float melody[8]  = {
+    523.25, 587.33, 659.26, 523.25, 523.25, 587.33, 659.26, 523.25
+  };
+
+  for (int i = 0; i < 8; i++){
+    buzzer_set_period(melody[i]);
+    __delay_cycles(1000000);
+  }
+  buzzer_set_period(0);
+}

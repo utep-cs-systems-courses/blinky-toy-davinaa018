@@ -11,4 +11,4 @@ CD to the project directory, run **Make** then CD to the src directory and run *
 - **Switch 1:** This switch shows the lights in a dim state
 - **Switch 2:** This switch generates a pattern using leds
 - **Switch 3:** This switch plays a melody
-- **Switch 4:**
+- **Switch 4:** This switch plays a shorter melody

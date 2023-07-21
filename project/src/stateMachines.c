@@ -23,6 +23,7 @@ void state_advance(int state){
     break;
   case 4:
     //Do something else
+    song();
     state = 0;
     break;
   default:
